@@ -1,17 +1,14 @@
-// Variables y Constantes
-
 const nombre = 'Francisco';
 const apellido = 'Santiago';
 
-let valorDado = 5;
-valorDado = 4;
+// const nombreCompleto = nombre + ' ' + apellido;
+const nombreCompleto = `${ nombre } ${ apellido }`;
 
-console.log( nombre, apellido, valorDado )
+console.log( nombreCompleto );
 
-//var No se recomienda su uso
-if ( true ) {
-    const nombre = 'Peter';
-    console.log(nombre)
+
+function getSaludo(nombre) {
+    return 'Hola ' + nombre;
 }
 
-console.log( valorDado );
+console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` );
