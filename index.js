@@ -1,14 +1,19 @@
-const nombre = 'Francisco';
-const apellido = 'Santiago';
+const persona = {
+  nombre: 'Tony',
+  apellido: 'Stark',
+  edad: 45,
+  direccion: {
+      ciudad: 'New York',
+      zip: 55321321,
+      lat: 14.3232,
+      lng: 34.9233321
+  }
+};
 
-// const nombreCompleto = nombre + ' ' + apellido;
-const nombreCompleto = `${ nombre } ${ apellido }`;
+// console.table( persona );
 
-console.log( nombreCompleto );
+const persona2 = { ...persona };
+persona2.nombre = 'Peter';
 
-
-function getSaludo(nombre) {
-    return 'Hola ' + nombre;
-}
-
-console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` );
+console.log( persona );
+console.log( persona2 )
