@@ -1,19 +1,15 @@
-const persona = {
-  nombre: 'Tony',
-  apellido: 'Stark',
-  edad: 45,
-  direccion: {
-      ciudad: 'New York',
-      zip: 55321321,
-      lat: 14.3232,
-      lng: 34.9233321
-  }
-};
+// const arreglo = new Array( 100 ); un tamaño predefinido, puede seguir expandiendose
+const arreglo = [1,2,3,4];
+// arreglo.push(1)
+// arreglo.push(2)
+// arreglo.push(3)
 
-// console.table( persona );
+let arreglo2 = [ ...arreglo, 5 ];
 
-const persona2 = { ...persona };
-persona2.nombre = 'Peter';
+const arreglo3 = arreglo2.map( function(numero) {
+    return numero * 2;
+});
 
-console.log( persona );
-console.log( persona2 )
+console.log( arreglo );
+console.log( arreglo2 );
+console.log( arreglo3 );
