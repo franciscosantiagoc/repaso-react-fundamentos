@@ -1,15 +1,36 @@
-// const arreglo = new Array( 100 ); un tamaño predefinido, puede seguir expandiendose
-const arreglo = [1,2,3,4];
-// arreglo.push(1)
-// arreglo.push(2)
-// arreglo.push(3)
 
-let arreglo2 = [ ...arreglo, 5 ];
+//No se recomienda el uso de estas funciones porque pueden ser sobre escritas 
+//function saludar( nombre ) {
+//     return `Hola, ${ nombre }`;
+// }
 
-const arreglo3 = arreglo2.map( function(numero) {
-    return numero * 2;
+//es recomendable el uso de la funciones de este tipo
+const saludar2 = ( nombre ) => {
+  return `Hola, ${ nombre }`;
+}
+
+const saludar3 = ( nombre ) => `Hola, ${ nombre }`;
+const saludar4 = () => `Hola Mundo`;
+
+// console.log( saludar('Goku') )
+
+console.log( saludar2('Vegeta') );
+console.log( saludar3('Goku') );
+console.log( saludar4() );
+
+const getUser = () => ({
+      uid: 'ABC123',
+      username: 'El_Papi1502'
 });
 
-console.log( arreglo );
-console.log( arreglo2 );
-console.log( arreglo3 );
+const user = getUser();
+console.log(user);
+
+// Tarea
+const getUsuarioActivo = ( nombre ) =>({
+  uid: 'ABC567',
+  username: nombre
+})
+
+const usuarioActivo = getUsuarioActivo('Fernando');
+console.log( usuarioActivo );
