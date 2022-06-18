@@ -23,3 +23,5 @@ giphyApi.get('/random')
       document.body.append( img )
 
   })
+
+export default giphyApi;
